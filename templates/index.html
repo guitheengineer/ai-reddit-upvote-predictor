@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <form>
+    <label id="search" class="flex flex-col gap-3 mb-1">
+      <div>Type a valid reddit post</div>
+    </label>
+    <div class="flex gap-2">
+      <input class="border border-gray-500"
+             pattern="^(https?://)?(www\.)?reddit\.com/r/[\w-]+/comments/[\w-]+/?$"
+             name="search"
+             type="text"/>
+      <button class="bg-black text-white text-sm px-3 py-1" type="submit">Submit</button>
+    </div>
+  </form>
+{% endblock content %}

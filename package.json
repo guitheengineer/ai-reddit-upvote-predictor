@@ -1,0 +1,12 @@
+{
+  "name": "reddit-upvote-predictor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "tailwindcss": "^3.2.7"
+  },
+  "scripts": {
+    "tw": "npx tailwindcss -i ./static/css/src/style.css -o ./static/css/output/style.css --watch"
+  }
+}
