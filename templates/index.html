@@ -1,15 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-  <form>
-    <label id="search" class="flex flex-col gap-3 mb-1">
-      <div>Type a valid reddit post</div>
-    </label>
-    <div class="flex gap-2">
-      <input class="border border-gray-500"
-             pattern="^(https?://)?(www\.)?reddit\.com/r/[\w-]+/comments/[\w-]+/?$"
-             name="search"
-             type="text"/>
-      <button class="bg-black text-white text-sm px-3 py-1" type="submit">Submit</button>
-    </div>
-  </form>
+  <div class="py-10 mx-auto lg:w-1/2">
+    <form autocomplete="off" class="flex flex-col gap-5">
+      <label id="search" class="flex flex-col gap-3 mb-1">
+        <div>1. Type a reddit post URL</div>
+        <input pattern="^https?://(?:www\.)?reddit\.com/r/[\w-]+/comments/[\w-]+/[\w-]+/?$"
+               required
+               value="{{ search }}"
+               placeholder="https://www.reddit.com/r/pics/comments/92dd8/test_post_please_ignore/"
+               class="border w-full border-gray-500 px-3 py-2"
+               name="search"
+               type="text"/>
+      </label>
+      <label class="flex flex-col gap-3 mb-1">
+        2. Type your comment
+        <textarea value="{{ comment }}"
+                  name="comment"
+                  required
+                  class="border border-gray-500 px-3 py-2">{{ comment }}</textarea>
+      </label>
+      {% if upvote_probability %}<p>Upvote probability: {{ upvote_probability }}</p>{% endif %}
+      <button class="bg-black text-white px-3 py-2" type="submit">Submit</button>
+    </form>
+  </div>
 {% endblock content %}

@@ -7,6 +7,7 @@
     "tailwindcss": "^3.2.7"
   },
   "scripts": {
-    "tw": "npx tailwindcss -i ./static/css/src/style.css -o ./static/css/output/style.css --watch"
+    "tw": "npx tailwindcss -i ./static/css/src/style.css -o ./static/css/output/style.css --watch",
+    "dev": "python3 app.py"
   }
 }
