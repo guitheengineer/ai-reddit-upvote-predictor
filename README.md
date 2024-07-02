@@ -33,13 +33,7 @@
 
 ---
 
-## 🖥 About
-
-BetterAim is an aim game for FPS players. It's intended to solve one crucial user demand: the ability to customize their experience. Only gamers themselves understand the weakness that need to be trained, so with BetterAim players can change their own game to fit their needs and extract the most productive training to improve.
-
----
-
-## 🕹 Features
+## 🕹 About/Features
 
 - [x] Get the title and content of a reddit post using the Reddit API
 - [x] Use a pre trained model (DialogRPT) to analyze the chance of upvotes based on the comment on a post
